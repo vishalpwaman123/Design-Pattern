@@ -18,7 +18,22 @@
 
 // Factory Design Pattern
 
-var factory = new NotificationFactory();
-var notification = factory.create("EMAIL");
-notification.Send();
+//var factory = new NotificationFactory();
+//var notification = factory.create("EMAIL");
+//notification.Send();
+
+// Abstract Factory Design Pattern
+
+IUIFactory factory;
+string operatingSystem = "MAC";
+
+if (operatingSystem.Equals("WINDOW"))
+    factory = new WindowFactory();
+else
+    factory = new MacFactory();
+
+IButton button = factory.CreateButton();
+ICheckbox checkbox = factory.CreateCheckbox();
+button.Render();
+checkbox.Render();
 
