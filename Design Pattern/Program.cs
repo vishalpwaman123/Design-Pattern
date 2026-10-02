@@ -37,3 +37,10 @@ ICheckbox checkbox = factory.CreateCheckbox();
 button.Render();
 checkbox.Render();
 
+// Singleton Desing Pattern
+
+//var singleton1 = Singleton.GetInstance();
+//var singleton2 = Singleton.GetInstance();
+//singleton1.ShowMessage();
+//Console.WriteLine(singleton1 == singleton2);
+
